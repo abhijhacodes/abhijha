@@ -1,22 +1,44 @@
 {
   "name": "portfolio",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "postbuild": "next-sitemap",
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^1.1.1",
+    "@chakra-ui/react": "^1.7.1",
+    "@emotion/react": "^11.6.0",
+    "@emotion/styled": "^11.6.0",
+    "@next/mdx": "^12.0.4",
+    "@sendgrid/mail": "^7.6.0",
+    "@types/node": "^16.11.7",
+    "dayjs": "^1.10.7",
+    "fp-ts": "^2.11.5",
+    "framer-motion": "^4.1.17",
+    "gray-matter": "^4.0.3",
+    "io-ts": "^2.2.16",
     "next": "12.0.4",
+    "next-mdx-remote": "^3.0.8",
+    "next-seo": "^4.28.1",
+    "next-sitemap": "^1.6.203",
+    "nprogress": "^0.2.0",
+    "prism-react-renderer": "^1.2.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
+    "remark-code-titles": "^0.1.2",
+    "remark-slug": "^7.0.1"
   },
   "devDependencies": {
-    "@types/node": "16.11.7",
-    "@types/react": "17.0.35",
+    "@types/nprogress": "^0.2.0",
+    "@types/react": "17.0.31",
     "eslint": "7.32.0",
-    "eslint-config-next": "12.0.4",
+    "eslint-config-next": "11.1.2",
     "typescript": "4.4.4"
   }
 }
