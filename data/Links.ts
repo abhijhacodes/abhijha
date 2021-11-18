@@ -1,4 +1,4 @@
-export const BASE_URL = "https://abhijha.live/";
+export const BASE_URL = "https://www.abhijha.live/";
 export const GITHUB_URL = "https://github.com/abhijhacodes";
 export const LINKEDIN_URL =
   "https://www.linkedin.com/in/abhishek-jha-3867b4205";

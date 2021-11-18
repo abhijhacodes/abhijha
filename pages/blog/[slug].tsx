@@ -25,7 +25,6 @@ import dayjs from "dayjs";
 import remarkCodeTitles from "remark-code-titles";
 import remarkSlug from "remark-slug";
 import { PostContainer } from "../../components";
-import { BASE_URL } from "../../data/Links";
 
 export default function PostPage(props: {
   source: any;
@@ -37,7 +36,7 @@ export default function PostPage(props: {
   const postTitle = frontMatter.title;
   const postDescription = frontMatter.description;
   const postLink = `${frontMatter.__resourcePath.replace(".mdx", "")}`;
-  const { hasCopied, onCopy } = useClipboard(`${BASE_URL}/blog/${postLink}`);
+  const { hasCopied, onCopy } = useClipboard(`abhijha.live/blog/${postLink}`);
 
   return (
     <>

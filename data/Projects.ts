@@ -61,7 +61,7 @@ export const ProjectData: Array<ProjectProps> = [
     title: "Rick and Morty",
     desc: "Web app for getting details of all characters from show Rick and Morty. Built with Next.js, GraphQL and Chakra UI. Has features like search, dark theme and responsive design.",
     githubLink: "https://github.com/abhijhacodes/rick-and-morty",
-    deployLink: "https://rick-and-morty-nine-lilac.vercel.app/",
+    deployLink: "https://rick-and-mortyy.vercel.app/",
     tags: ["Next", "GraphQL", "ChakraUI"],
   },
   {
