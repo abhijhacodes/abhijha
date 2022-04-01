@@ -98,6 +98,14 @@ export const ProjectData: Array<ProjectProps> = [
     tags: ["Mobile", "Kotlin", "API"],
   },
   {
+    imageURL: "/images/project/superheroes.png",
+    category: ["All", "Web"],
+    title: "SuperHeroes",
+    desc: "Full stack CRUD app built with Next.js, MongoDB and material design. Uses custom Rest APIs for all operations.",
+    githubLink: "https://github.com/abhijhacodes/nextjs-full-stack",
+    tags: ["Web", "Next", "MongoDB"],
+  },
+  {
     imageURL: "/images/project/techfreaks.png",
     category: ["All", "Web"],
     title: "TechFreaks website",
