@@ -5,7 +5,6 @@ import { FaCopy } from "react-icons/fa";
 import { Box, Button, useClipboard, useColorMode } from "@chakra-ui/react";
 import { useRef } from "react";
 
-
 interface CodeBlockProps {
   children: string;
   className: string;
