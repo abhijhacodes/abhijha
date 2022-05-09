@@ -41,7 +41,7 @@ type TagProps = {
 };
 
 export const ProjectCard = (props: ProjectProps) => {
-  const { imageURL, title, desc, githubLink, deployLink, tags } = props;
+  const { imageURL, title, description, githubLink, deployLink, tags } = props;
 
   const getTag = (tag: string): TagProps => {
     let values: TagProps = { color: "gray", icon: <FaCode /> };
@@ -170,7 +170,7 @@ export const ProjectCard = (props: ProjectProps) => {
           color={useColorModeValue("gray.600", "gray.400")}
           fontSize={["sm", "md"]}
         >
-          {desc}
+          {description}
         </Text>
       </Stack>
     </Stack>
