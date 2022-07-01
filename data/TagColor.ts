@@ -11,4 +11,7 @@ export const TagColor: any = {
   leetcode: { bgColor: "orange.600", hover: "orange.800" },
   markdown: { bgColor: "purple.600", hover: "purple.800" },
   chakraui: { bgColor: "teal.600", hover: "teal.800" },
+  backend: { bgColor: "blue.600", hover: "blue.800" },
+  database: { bgColor: "orange.600", hover: "orange.800" },
+  resources: { bgColor: "pink.600", hover: "pink.800" },
 };
