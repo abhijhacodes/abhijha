@@ -12,6 +12,16 @@ export interface ProjectProps {
 
 export const ProjectData: Array<ProjectProps> = [
   {
+    imageURL: "/images/project/sellpro.jpg",
+    category: ["All", "Web"],
+    title: "SellPro",
+    description:
+      "Online selling platform. Users can upload their products to sell, and they will be available for buying after admin approval. Auth, admin and user dashboard, and many other features.",
+    githubLink: "https://github.com/abhijhacodes/sellpro",
+    deployLink: "https://youtu.be/yxeopIPJ3cM",
+    tags: ["Next", "Express", "MongoDB"],
+  },
+  {
     imageURL: "/images/project/colconnect.png",
     category: ["All", "Web"],
     title: "Colconnect",
@@ -19,6 +29,15 @@ export const ProjectData: Array<ProjectProps> = [
       "Full stack social media app using Next.js, Tailwind CSS and Firebase. With features like post image, post text, online IDE, and login / logout system.",
     githubLink: "https://github.com/abhijhacodes/colconnect",
     tags: ["Next", "Firebase", "Tailwind"],
+  },
+  {
+    imageURL: "/images/project/portfolio.png",
+    category: ["All", "Web"],
+    title: "Personal Portfolio",
+    description:
+      "The site that you are currently on. SEO optimised, fully responsive portfolio website with dark and light theme. With markdown featured blog section.",
+    deployLink: "https://abhijha.live/",
+    tags: ["Next", "ChakraUI", "MDX"],
   },
   {
     imageURL: "/images/project/ide.png",
@@ -29,15 +48,6 @@ export const ProjectData: Array<ProjectProps> = [
     githubLink: "https://github.com/abhijhacodes/ide",
     deployLink: "https://colconnect-ide.netlify.app/",
     tags: ["Web", "React", "CSS"],
-  },
-  {
-    imageURL: "/images/project/portfolio.png",
-    category: ["All", "Web"],
-    title: "Personal Portfolio",
-    description:
-      "The site that you are currently on. SEO optimised, fully responsive portfolio website with dark and light theme. With markdown featured blog section.",
-    deployLink: "https://abhijha.live/",
-    tags: ["Next", "ChakraUI", "mdx"],
   },
   {
     imageURL: "/images/project/ipldashboard.png",

@@ -27,7 +27,14 @@ const NavBarMenuItem = (props: NavItem) => {
 const NavBarButton = (props: NavItem) => {
   return (
     <NextLink href={props.href} passHref>
-      <Button as="a" variant="ghost" fontWeight="400">
+      <Button
+        as="a"
+        variant="ghost"
+        fontWeight="400"
+        _hover={{
+          backgroundColor: "teal.900",
+        }}
+      >
         {props.label}
       </Button>
     </NextLink>

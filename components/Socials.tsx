@@ -2,7 +2,7 @@ import { HStack, VStack, Button, Link, Icon, Tooltip } from "@chakra-ui/react";
 import { FaEnvelopeOpenText, FaGithub, FaLinkedin } from "react-icons/fa";
 import { GITHUB_URL, LINKEDIN_URL, EMAIL_URL } from "../data/Links";
 import NextLink from "next/link";
-import { MdMenuBook, MdLaptopChromebook } from "react-icons/md"
+import { MdMenuBook, MdLaptopChromebook } from "react-icons/md";
 
 export const Socials = () => {
   return (

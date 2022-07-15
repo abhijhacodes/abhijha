@@ -32,6 +32,8 @@ import {
   SiChakraui,
   SiTypescript,
   SiFirebase,
+  SiMongodb,
+  SiExpress,
 } from "react-icons/si";
 import { ProjectProps } from "../data/Projects";
 
@@ -90,6 +92,12 @@ export const ProjectCard = (props: ProjectProps) => {
     } else if (tag == "ChakraUI") {
       values.color = "blue";
       values.icon = <SiChakraui />;
+    } else if (tag == "Express") {
+      values.color = "teal";
+      values.icon = <SiExpress />;
+    } else if (tag == "MongoDB") {
+      values.color = "green";
+      values.icon = <SiMongodb />;
     } else {
       values.color = "gray";
       values.icon = <FaCode />;
