@@ -117,7 +117,7 @@ export const About = () => {
                   <List>
                     <ListItem>
                       <ListIcon as={MdPerson} color="purple.500" />I am Abhishek
-                      Jha, a third year Computer engineering undergrad,
+                      Jha, a final year Computer Engineering undergrad,
                       <br />
                       who is passionate about coding and development
                     </ListItem>

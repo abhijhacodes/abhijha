@@ -32,7 +32,10 @@ const NavBarButton = (props: NavItem) => {
         variant="ghost"
         fontWeight="400"
         _hover={{
-          backgroundColor: "teal.900",
+          backgroundColor: useColorModeValue("teal.100", "teal.900"),
+        }}
+        _active={{
+          backgroundColor: useColorModeValue("teal.100", "teal.900"),
         }}
       >
         {props.label}
@@ -52,12 +55,8 @@ const MobileNavBar = () => {
           variant="outline"
         />
         <MenuList>
-          {NAV_ITEMS.map((item) => (
-            <NavBarMenuItem
-              label={item.label}
-              href={item.href}
-              key={item.href}
-            />
+          {NAV_ITEMS.map((item, index) => (
+            <NavBarMenuItem label={item.label} href={item.href} key={index} />
           ))}
         </MenuList>
       </Menu>
@@ -80,6 +79,7 @@ const DesktopNavBar = () => {
 
 export const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <Box>
       <Flex

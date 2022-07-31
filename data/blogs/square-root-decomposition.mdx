@@ -1,0 +1,247 @@
+---
+title: Square root decomposition
+publishedAt: "2022-07-31"
+description: Introduction to square root decomposition for beginners
+tags:
+  - tutorial
+  - cp
+  - dsa
+hero: "/images/blog/sqrt.png"
+authors:
+  - Abhishek Jha
+isBlogPost: true
+---
+
+> This is a detailed introduction to the range query technique, square root decomposition for beginners.
+
+<br />
+
+This technique is used when we want to perform some queries on a range of elements in an array, as well as perform point update, optimally.
+
+Let us understand the technique by solving a sample problem:
+(Please read the problem statement first)
+
+[CSES - Dynamic Range Sum Queries](https://cses.fi/problemset/task/1648)
+
+<br />
+
+### The idea:
+
+For the above problem, we can use a prefix sum array to find sum of range [a,b] in O(1) time using the standard formula,
+
+`prefixSum[a, b] = prefixSum[0, b] - prefixSum[0, a-1]`
+
+But performing point update at index k will take O(n) time in worst case, as we will need to update prefix sum of range [k, n-1]
+
+Here square root decomposition comes to the rescue.
+
+The main idea behind this technique is that if we divide our array into some smaller blocks, all having same number of elements, then we can reduce the overall time complexity by avoiding traversing over the whole range.
+
+We can achieve this by **performing some pre calculations on the input, such that each block contains some information about a specific range** so that we can directly accsess that value instead of traversing the whole range.
+
+(Which is storing sum of ranges in blocks for this problem)
+
+<highlight>
+  x blocks, each having y elements
+  <brl />
+  blocks[0] = sum[0, y-1]
+  <brl />
+  blocks[1] = sum[y, 2y-1]
+  <brl />
+  ...
+  <brl />
+  blocks[x-1] = sum[(x-1)*y, n-1]
+  <brl />
+  General range: blocks[k] = sum[k*y, (k+1)*y-1]
+</highlight>
+
+<br />
+
+### How to decompose input ?
+
+We need to divide the array into x blocks named block0, block1, .., block(x-1) such that all blocks have y elements and x \* y = n
+
+But how to find the most optimal x and y ? (We will see this in some time)
+
+<Image
+  src="/images/blog/sqrt-1.png"
+  alt="Image Explanation"
+  height="360px"
+  width="680px"
+/>
+
+In the above image you seen the decomposition of array.
+
+<br />
+
+### How to query sum of range [a, b]:
+
+#### `Case 1: a and b both are end point of a block`
+
+**Example:** sum[0, 8]
+
+<Image
+  src="/images/blog/sqrt-2.png"
+  alt="Image Explanation"
+  height="360px"
+  width="680px"
+/>
+
+As you can see, in this case we just need to add all the ranges, in worst case we may need to add x blocks, so **time complexity will be O(x)**
+
+(Note that finding the block of a and b, and whether it is end point or not is important step)
+
+#### `Case 2: either a or b or both are not end points`
+
+**Example:** sum[2, 6]
+
+<Image
+  src="/images/blog/sqrt-3.png"
+  alt="Image Explanation"
+  height="360px"
+  width="680px"
+/>
+
+And in this case we need to add all the complete ranges, which in worst can can be x-2, and both incomplete ranges, which in worst case can have 2y elements (y in each block), so **time complexity will be O(x + y)**
+
+<br />
+
+### How to do point update at index k:
+
+This operation is pretty straight forward, we just need to update the value at given index in array and update the sum of corresponding block. Then we can continue other operations as before.
+
+**Time complexity of this operation will be O(1)**
+
+<Image
+  src="/images/blog/sqrt-4.png"
+  alt="Image Explanation"
+  height="360px"
+  width="680px"
+/>
+
+<br />
+
+### How to decide most optimal x and y mathematically:
+
+<br />
+
+<highlight>
+We know that x * y = n
+<brl />
+And cost of query = x + y, let c = x + y
+<brl />
+And we want to choose x, y such that this cost is minimized
+
+x \* y = n => x = n / y
+
+<brl />
+c = x + y
+<brl />
+=> c = (n / y) + y
+
+Now differentiating both sides with respect to y, we get
+`dc / dy = 1 - (n / y^2)`
+
+<brl />
+Now to minimize c, 0 = 1 - (n / y^2)
+<brl />
+=> y^2 = n
+<brl />
+=> y = sqrt(n)
+<brl />
+=> x = sqrt(n)
+
+So, the cost will be minimum at x = y = sqrt(n), hence it is called square root decomposition.
+
+</highlight>
+
+So, in this technique we try to decompose array of size n into **sqrt(n) blocks** such that each block has **sqrt(n) elements**, and perform operations as explained above.
+
+When length of array is **not a perfect square**, in that case we can put ceil(sqrt(n)) elements in first x-1 blocks and the remaining elements in last block. It will also give same time complexity.
+
+**Example:** Array of size 11 can be divided into blocks of size 3 + 3 + 3 + 2
+
+<br />
+
+### Code:
+
+<br />
+
+```cpp:sqrtDecomposition.cpp
+class sqrtDecomposition {
+    private:
+        int blockSize;
+        vector<int> values, blocks;
+
+    public:
+        // preprocessing the input, calculating sum of blocks
+        sqrtDecomposition(vector<int>& input) {
+            int n = input.size();
+            blockSize = ceil(sqrt(n));
+            int blockIndex = -1;
+
+            values.resize(n);
+            blocks.resize(blockSize);
+
+            for(int i = 0; i < n; ++i) {
+                values[i] = input[i];
+
+                // storing sum of each block of size sqrt(n)
+                if(i % blockSize == 0) blockIndex++;
+                blocks[blockIndex] += input[i];
+            }
+        }
+
+        // update - O(1) time
+        void pointUpdate(int k, int newValue) {
+            // finding block number of element to update
+            int block = k / blockSize;
+            blocks[block] += newValue - values[k]; // updated sum of block
+            values[k] = newValue;
+        }
+
+        // query - O(sqrt(n)) time
+        int rangeSumQuery(int left, int right) {
+            int sum = 0;
+
+            // calculating sum of leftmost block, it will handle the case of end points too
+            while (left < right and (left % blockSize != 0) and left != 0) {
+                sum += values[left];
+                left++;
+            }
+
+            // calculating sum of all complete blocks
+            while (left + blockSize - 1 <= right) {
+                sum += blocks[left / blockSize];
+                left += blockSize; // traversing whole block at once
+            }
+
+            // calculating sum of righttmost block
+            while (left <= right) {
+                sum += values[left];
+                left++;
+            }
+
+            return sum;
+        }
+};
+
+// driver code
+int main() {
+    vector<int> input = {3, 2, 4, 5, 1, 1, 5, 3, 7};
+    sqrtDecomposition obj(input);
+    cout << obj.rangeSumQuery(0, 2) << '\n'; // output = 3+2+4 = 9
+    obj.pointUpdate(1, 6); // input[1] = 6
+    cout << obj.rangeSumQuery(0, 2); // output = 3+6+4 = 13
+}
+```
+
+<br />
+
+[submission link](https://cses.fi/paste/9a402b472c7d3f824238c8/) for the above problem using this template.
+
+[submission link](https://leetcode.com/submissions/detail/761559720/) for the leetcode problem [307. Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable/) using this template.
+
+You can use the same decomposition logic for any complex range query problem using square root decomposition
+
+But, it's better to use Segment Tree or Fenwick Tree when you have to perform range updates, as it has better time complexity. So, choose right data structure for the right problem.

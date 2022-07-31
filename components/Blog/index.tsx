@@ -62,7 +62,7 @@ const MDXComponents = {
       <Box
         as="section"
         mt={4}
-        bg={useColorModeValue("gray.50", "gray.800")}
+        bg={useColorModeValue("gray.100", "gray.900")}
         p={4}
         {...props}
       />

@@ -14,4 +14,6 @@ export const TagColor: any = {
   backend: { bgColor: "blue.600", hover: "blue.800" },
   database: { bgColor: "orange.600", hover: "orange.800" },
   resources: { bgColor: "pink.600", hover: "pink.800" },
+  dsa: { bgColor: "red.600", hover: "red.800" },
+  cp: { bgColor: "blue.600", hover: "blue.800" },
 };

@@ -1,5 +1,5 @@
 import Highlight, { defaultProps, Language } from "prism-react-renderer";
-import darkTheme from "prism-react-renderer/themes/nightOwl";
+import darkTheme from "prism-react-renderer/themes/vsDark";
 import lightTheme from "prism-react-renderer/themes/vsLight";
 import { FaCopy } from "react-icons/fa";
 import { Box, Button, useClipboard, useColorMode } from "@chakra-ui/react";

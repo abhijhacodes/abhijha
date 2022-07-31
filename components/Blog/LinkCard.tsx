@@ -39,6 +39,8 @@ export const LinkCard = ({
         _hover={{ textDecoration: "none" }}
         borderWidth="0.5px"
         borderColor={useColorModeValue("teal.300", "teal.800")}
+        backgroundColor={useColorModeValue("white", "gray.900")}
+        boxShadow="2xl"
         borderRadius="lg"
         padding="1.5rem"
       >

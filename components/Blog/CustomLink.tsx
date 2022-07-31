@@ -11,8 +11,8 @@ interface CustomLinkProps {
 export const CustomLink = (props: CustomLinkProps) => {
   const { colorMode } = useColorMode();
   const color = {
-    light: "hsl(208, 99%, 44%)",
-    dark: "hsl(208, 95%, 68%)",
+    light: "#383CC1",
+    dark: "#35BDD0",
   };
 
   const href = props.href;

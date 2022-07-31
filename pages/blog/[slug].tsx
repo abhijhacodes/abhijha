@@ -31,7 +31,9 @@ export default function PostPage(props: {
   frontMatter: BlogFrontMatter;
   postFileName: string;
 }) {
-  const frontMatter = decodeWith(BlogFrontMatterValidator)(props.frontMatter);
+  const frontMatter: any = decodeWith(BlogFrontMatterValidator)(
+    props.frontMatter
+  );
   const publishedAt = frontMatter.publishedAt;
   const postTitle = frontMatter.title;
   const postDescription = frontMatter.description;
