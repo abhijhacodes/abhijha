@@ -22,7 +22,7 @@ export const CustomLink = (props: CustomLinkProps) => {
     <NextLink href={href} passHref>
       <Link color={color[colorMode]} isExternal={!isInternalLink} {...props}>
         {props.children}
-        {!isInternalLink && <ExternalLinkIcon mx="2px" />}
+        {!isInternalLink && <ExternalLinkIcon mx="4px" />}
       </Link>
     </NextLink>
   );
