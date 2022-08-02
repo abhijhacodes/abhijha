@@ -88,11 +88,12 @@ export const About = () => {
             maxH={{ base: "220px", md: "280px", lg: "350px" }}
           >
             <Image
-              src="/images/abhishek.jpg"
+              src="/images/posterphoto.png"
               borderRadius="full"
               w={{ base: "220px", md: "280px", lg: "350px" }}
               h={{ base: "220px", md: "280px", lg: "350px" }}
               alt="Abhishek Jha"
+              cursor="pointer"
             />
           </Box>
         </Stack>

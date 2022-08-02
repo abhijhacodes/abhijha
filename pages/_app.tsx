@@ -19,7 +19,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <ChakraProvider theme={theme}>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" type="image/png" href="/images/dp.png" />
+          <link rel="icon" type="image/png" href="/images/siteicon.png" />
         </Head>
         <Component {...pageProps} />
       </ChakraProvider>

@@ -38,7 +38,7 @@ export const Layout = ({
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
-          <link rel="icon" type="image/png" href="/images/logo.png" />
+          <link rel="icon" type="image/png" href="/images/siteicon.png" />
           <meta httpEquiv="content-language" content="en-gb" />
         </Head>
         <header>
