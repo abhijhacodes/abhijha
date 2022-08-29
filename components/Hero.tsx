@@ -28,7 +28,7 @@ export const Hero = () => {
         maxW={"7xl"}
         position="relative"
         h={{ base: "100%", lg: "100vh" }}
-        py={{ base: 24, lg: 32 }}
+        py={{ base: 24, md: 28, lg: 32 }}
         spacing={{ base: 0, lg: 24 }}
         direction={{ base: "column", lg: "row" }}
         alignItems={"center"}

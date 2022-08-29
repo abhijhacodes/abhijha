@@ -121,9 +121,9 @@ export const Contact = () => {
           color="white"
           borderRadius="2xl"
           m={{ sm: 4, md: 16, lg: 10 }}
-          p={{ sm: 5, md: 5, lg: 16 }}
+          p={{ sm: 5, md: 10, lg: 16 }}
         >
-          <Box p={4}>
+          <Box py={4} px={{ base: 4, md: 24, lg: 4 }}>
             <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
               <WrapItem>
                 <Box>
