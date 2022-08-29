@@ -54,7 +54,7 @@ export const Hero = () => {
               fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
               maxW={"3xl"}
             >
-              Programmer | Developer | Designer
+              Competitive Programmer | Full Stack Developer
             </Text>
             <Text
               color={useColorModeValue("gray.500", "gray.400")}
