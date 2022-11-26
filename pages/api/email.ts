@@ -7,7 +7,10 @@ type Data = {
   error: string;
 };
 
-export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+const EmailHandler = async (
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) => {
   if (req.method === "POST") {
     const {
       name,
@@ -40,3 +43,5 @@ export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     }
   }
 };
+
+export default EmailHandler;

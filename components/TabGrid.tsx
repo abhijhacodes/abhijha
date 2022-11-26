@@ -1,4 +1,3 @@
-import React from "react";
 import { SimpleGrid } from "@chakra-ui/react";
 import { ProjectCard } from "./ProjectCard";
 import { ProjectData, categories, ProjectProps } from "../data/Projects";

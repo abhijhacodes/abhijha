@@ -13,6 +13,10 @@ export const NAV_ITEMS: Array<NavItem> = [
     href: "/projects",
   },
   {
+    label: "Experience",
+    href: "/experience",
+  },
+  {
     label: "Blog",
     href: "/blog",
   },

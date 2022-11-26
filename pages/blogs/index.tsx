@@ -10,12 +10,12 @@ import {
   InputGroup,
   InputLeftElement,
 } from "@chakra-ui/react";
-import { Layout, PostCard } from "../components/";
-import React, { useState } from "react";
-import { BlogFrontMatter } from "../types";
+import { Layout, PostCard } from "../../components/";
+import { useState } from "react";
 import { SearchIcon } from "@chakra-ui/icons";
-import { searchInFrontMatter, sortByPublishedAt } from "../utils/postUtils";
-import { getNotesMetadata } from "../utils/mdxUtils";
+import { searchInFrontMatter, sortByPublishedAt } from "../../utils/postUtils";
+import { getNotesMetadata } from "../../utils/mdxUtils";
+import { BlogFrontMatter } from "../../types";
 
 export function getStaticProps() {
   return { props: { notes: getNotesMetadata() } };
@@ -29,7 +29,7 @@ const Blog = ({ notes }: { notes: BlogFrontMatter[] }) => {
       <Layout
         title="Blogs | Abhishek Jha"
         description="Blog posts by Abhishek Jha"
-        relativeCanonicalURL="/blog"
+        relativeCanonicalURL="/blogs"
       >
         <Box
           css={{
@@ -91,7 +91,7 @@ const Blog = ({ notes }: { notes: BlogFrontMatter[] }) => {
                   <PostCard
                     key={frontMatter.title}
                     frontMatter={frontMatter}
-                    folderPrefix="blog/"
+                    folderPrefix="blogs/"
                   />
                 ))}
             </Stack>

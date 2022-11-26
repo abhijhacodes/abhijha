@@ -1,7 +1,7 @@
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import MDXComponents from "../../components/Blog";
-import { Layout } from "../../components";
+import { Layout, PostContainer } from "../../components";
 import { BlogFrontMatter, BlogFrontMatterValidator } from "../../types";
 import { getNoteMetadata, postFilePaths } from "../../utils/mdxUtils";
 import decodeWith from "../../utils/ioTsUtils";
@@ -19,12 +19,9 @@ import {
   VStack,
   useColorModeValue,
 } from "@chakra-ui/react";
-
-import React from "react";
 import dayjs from "dayjs";
 import remarkCodeTitles from "remark-code-titles";
 import remarkSlug from "remark-slug";
-import { PostContainer } from "../../components";
 
 export default function PostPage(props: {
   source: any;
@@ -38,7 +35,7 @@ export default function PostPage(props: {
   const postTitle = frontMatter.title;
   const postDescription = frontMatter.description;
   const postLink = `${frontMatter.__resourcePath.replace(".mdx", "")}`;
-  const { hasCopied, onCopy } = useClipboard(`abhijha.live/blog/${postLink}`);
+  const { hasCopied, onCopy } = useClipboard(`abhijha.in/blogs/${postLink}`);
 
   return (
     <>

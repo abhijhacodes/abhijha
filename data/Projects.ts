@@ -36,7 +36,7 @@ export const ProjectData: Array<ProjectProps> = [
     title: "Personal Portfolio",
     description:
       "The site that you are currently on. SEO optimised, fully responsive portfolio website with dark and light theme. With markdown featured blog section.",
-    deployLink: "https://abhijha.live/",
+    deployLink: "https://abhijha.in/",
     tags: ["Next", "ChakraUI", "MDX"],
   },
   {

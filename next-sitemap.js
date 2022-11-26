@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: "https://www.abhijha.live/",
+  siteUrl: "https://www.abhijha.in/",
   generateRobotsTxt: true,
 };

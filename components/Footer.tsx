@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Flex, IconButton, Link } from "@chakra-ui/react";
 import {
   FaGithub,

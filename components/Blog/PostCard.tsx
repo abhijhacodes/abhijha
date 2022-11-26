@@ -1,4 +1,3 @@
-import React from "react";
 import { LinkCard } from "../";
 import decodeWith from "../../utils/ioTsUtils";
 import { BlogFrontMatterValidator } from "../../types";
