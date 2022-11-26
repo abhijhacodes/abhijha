@@ -8,9 +8,13 @@ import {
   Button,
   Box,
   useColorModeValue,
+  VStack,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
+import { IoRocket } from "react-icons/io5";
 import { Layout } from "../components";
+import { ExperienceCard } from "../components/ExperienceCard";
+import { ExperienceData } from "../data/Experience";
 
 const Experience = () => {
   return (
@@ -39,7 +43,7 @@ const Experience = () => {
             >
               <Heading
                 as="h2"
-                bgGradient="linear(to-r, #43B3AE, #e3192a)"
+                bgGradient="linear(to-r, #cc6c06, #22b5ab)"
                 bgClip="text"
                 fontWeight="bold"
                 mt="24"
@@ -48,6 +52,14 @@ const Experience = () => {
               >
                 Work Experience
               </Heading>
+              <Text color={useColorModeValue("gray.700", "gray.300")} mt={3}>
+                A summary of my work experiences 🚀
+              </Text>
+              <VStack spacing={8} py={8} px={2}>
+                {ExperienceData.map((experience, index) => (
+                  <ExperienceCard {...experience} key={index} />
+                ))}
+              </VStack>
             </Flex>
           </Box>
         </main>

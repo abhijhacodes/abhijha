@@ -1,9 +1,6 @@
 import type { NextPage } from "next";
 import {
   Flex,
-  HStack,
-  Icon,
-  Tab,
   Box,
   Heading,
   TabList,
@@ -15,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { Layout, TabGrid } from "../components";
 import { TabListData } from "../data/Projects";
+import { TabItem } from "../components/TabItem";
 
 const Projects: NextPage = () => {
   return (
@@ -65,22 +63,7 @@ const Projects: NextPage = () => {
               >
                 <TabList display="flex" flexWrap="wrap">
                   {TabListData.map((tabData, index) => (
-                    <Tab
-                      bg={useColorModeValue("white.100", "gray.800")}
-                      color={useColorModeValue("gray.600", "gray.500")}
-                      _selected={{
-                        color: `${tabData.selectedColor}.800`,
-                        bg: `${tabData.selectedColor}.100`,
-                      }}
-                      mr={2}
-                      mt={2}
-                      key={index}
-                    >
-                      <HStack spacing={1}>
-                        <Icon as={tabData.icon} />
-                        <Text>{tabData.title}</Text>
-                      </HStack>
-                    </Tab>
+                    <TabItem {...tabData} key={index} />
                   ))}
                 </TabList>
 

@@ -41,6 +41,12 @@ export const Socials = () => {
             colorScheme="teal"
             variant="outline"
             leftIcon={<MdLaptopChromebook />}
+            boxShadow={
+              "0px 1px 25px -5px rgb(144 214 64 / 56%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
+            }
+            _hover={{
+              transform: "translate(2px, 6px)",
+            }}
           >
             See my work
           </Button>
@@ -51,6 +57,12 @@ export const Socials = () => {
             colorScheme="teal"
             variant="outline"
             leftIcon={<MdMenuBook />}
+            boxShadow={
+              "0px 1px 25px -5px rgb(144 214 64 / 56%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
+            }
+            _hover={{
+              transform: "translate(2px, 6px)",
+            }}
           >
             Read blogs
           </Button>

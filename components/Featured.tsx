@@ -8,7 +8,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { ProjectData as Projects } from "../data/Projects";
+import { ProjectsData as Projects } from "../data/Projects";
 import { ProjectCard } from "./";
 
 export const Featured = () => {
