@@ -52,7 +52,7 @@ export const LinkCard = ({
               flexDirection="column"
             >
               <Stack display="flex" direction={{ base: "column", lg: "row" }}>
-                <Container align="flex-start">
+                <Container>
                   <Stack
                     direction="row"
                     align="center"
