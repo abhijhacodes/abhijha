@@ -1,3 +1,7 @@
+import { AiOutlineCode, AiFillChrome, AiOutlineDesktop } from "react-icons/ai";
+import { BsPhone } from "react-icons/bs";
+import { FaRobot } from "react-icons/fa";
+
 export type categories = "All" | "Web" | "Mobile" | "Python" | "Misc";
 
 export interface ProjectProps {
@@ -10,7 +14,41 @@ export interface ProjectProps {
   tags: Array<string>;
 }
 
-export const ProjectData: Array<ProjectProps> = [
+export interface TabListProps {
+  icon: any;
+  selectedColor: string;
+  title: categories;
+}
+
+export const TabListData: Array<TabListProps> = [
+  {
+    icon: AiOutlineCode,
+    selectedColor: "red",
+    title: "All",
+  },
+  {
+    icon: AiFillChrome,
+    selectedColor: "yellow",
+    title: "Web",
+  },
+  {
+    icon: BsPhone,
+    selectedColor: "blue",
+    title: "Mobile",
+  },
+  {
+    icon: FaRobot,
+    selectedColor: "purple",
+    title: "Python",
+  },
+  {
+    icon: AiOutlineDesktop,
+    selectedColor: "teal",
+    title: "Misc",
+  },
+];
+
+export const ProjectsData: Array<ProjectProps> = [
   {
     imageURL: "/images/project/sellpro.jpg",
     category: ["All", "Web"],

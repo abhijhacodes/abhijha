@@ -12,7 +12,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { TagColor } from "../../data/TagColor";
+import { TagColor } from "../../data/Tags";
 
 interface LinkCardProps {
   name: string;

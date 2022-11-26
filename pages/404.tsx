@@ -1,6 +1,5 @@
 import {
   Container,
-  Icon,
   Stack,
   Flex,
   Heading,

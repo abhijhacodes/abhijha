@@ -17,8 +17,8 @@ export const NAV_ITEMS: Array<NavItem> = [
     href: "/experience",
   },
   {
-    label: "Blog",
-    href: "/blog",
+    label: "Blogs",
+    href: "/blogs",
   },
   {
     label: "About",

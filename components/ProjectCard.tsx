@@ -105,15 +105,6 @@ export const ProjectCard = (props: ProjectProps) => {
     return values;
   };
 
-  const Tags = tags.map((item) => (
-    <Tag key={item} colorScheme={getTag(item).color}>
-      <Box ml={-1} mr={2}>
-        {getTag(item).icon}
-      </Box>
-      <TagLabel>{item}</TagLabel>
-    </Tag>
-  ));
-
   return (
     <Stack
       bg={useColorModeValue("gray.50", "gray.800")}
@@ -172,7 +163,19 @@ export const ProjectCard = (props: ProjectProps) => {
             )}
           </Stack>
         </Stack>
-        <Stack isInline>{Tags}</Stack>
+        <Stack isInline>
+          {tags.map((tag, index) => {
+            const { color, icon } = getTag(tag);
+            return (
+              <Tag key={index} colorScheme={color}>
+                <Box ml={-1} mr={2}>
+                  {icon}
+                </Box>
+                <TagLabel>{tag}</TagLabel>
+              </Tag>
+            );
+          })}
+        </Stack>
         <Divider />
         <Text
           color={useColorModeValue("gray.600", "gray.400")}

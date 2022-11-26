@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import React from "react";
 import {
   Flex,
   HStack,
@@ -14,10 +13,8 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { AiFillChrome, AiOutlineCode, AiOutlineDesktop } from "react-icons/ai";
-import { BsPhone } from "react-icons/bs";
-import { FaRobot } from "react-icons/fa";
 import { Layout, TabGrid } from "../components";
+import { TabListData } from "../data/Projects";
 
 const Projects: NextPage = () => {
   return (
@@ -67,98 +64,32 @@ const Projects: NextPage = () => {
                 mb="24"
               >
                 <TabList display="flex" flexWrap="wrap">
-                  <Tab
-                    bg={useColorModeValue("white.100", "gray.800")}
-                    color={useColorModeValue("gray.600", "gray.500")}
-                    _selected={{
-                      color: "red.800",
-                      bg: "red.100",
-                    }}
-                    mr={2}
-                    mt={2}
-                  >
-                    <HStack spacing={1}>
-                      <Icon as={AiOutlineCode} />
-                      <Text>All</Text>
-                    </HStack>
-                  </Tab>
-                  <Tab
-                    bg={useColorModeValue("white", "gray.800")}
-                    color={useColorModeValue("gray.600", "gray.500")}
-                    _selected={{
-                      color: "yellow.800",
-                      bg: "yellow.100",
-                    }}
-                    mr={2}
-                    mt={2}
-                  >
-                    <HStack spacing={1}>
-                      <Icon as={AiFillChrome} />
-                      <Text>Web</Text>
-                    </HStack>
-                  </Tab>
-                  <Tab
-                    bg={useColorModeValue("white", "gray.800")}
-                    color={useColorModeValue("gray.600", "gray.500")}
-                    _selected={{
-                      color: "blue.800",
-                      bg: "blue.100",
-                    }}
-                    mr={2}
-                    mt={2}
-                  >
-                    <HStack spacing={1}>
-                      <Icon as={BsPhone} />
-                      <Text>Mobile</Text>
-                    </HStack>
-                  </Tab>
-                  <Tab
-                    bg={useColorModeValue("white", "gray.800")}
-                    color={useColorModeValue("gray.600", "gray.500")}
-                    _selected={{
-                      color: "purple.800",
-                      bg: "purple.100",
-                    }}
-                    mr={2}
-                    mt={2}
-                  >
-                    <HStack spacing={1}>
-                      <Icon as={FaRobot} />
-                      <Text>Python</Text>
-                    </HStack>
-                  </Tab>
-                  <Tab
-                    bg={useColorModeValue("white", "gray.800")}
-                    color={useColorModeValue("gray.600", "gray.500")}
-                    _selected={{
-                      color: "teal.800",
-                      bg: "teal.100",
-                    }}
-                    mr={2}
-                    mt={2}
-                  >
-                    <HStack spacing={1}>
-                      <Icon as={AiOutlineDesktop} />
-                      <Text>Misc</Text>
-                    </HStack>
-                  </Tab>
+                  {TabListData.map((tabData, index) => (
+                    <Tab
+                      bg={useColorModeValue("white.100", "gray.800")}
+                      color={useColorModeValue("gray.600", "gray.500")}
+                      _selected={{
+                        color: `${tabData.selectedColor}.800`,
+                        bg: `${tabData.selectedColor}.100`,
+                      }}
+                      mr={2}
+                      mt={2}
+                      key={index}
+                    >
+                      <HStack spacing={1}>
+                        <Icon as={tabData.icon} />
+                        <Text>{tabData.title}</Text>
+                      </HStack>
+                    </Tab>
+                  ))}
                 </TabList>
+
                 <TabPanels>
-                  <TabPanel>
-                    <TabGrid filter="All" />
-                  </TabPanel>
-                  <TabPanel>
-                    <TabGrid filter="Web" />
-                  </TabPanel>
-                  <TabPanel>
-                    <TabGrid filter="Mobile" />
-                  </TabPanel>
-                  <TabPanel>
-                    <TabGrid filter="Python" />
-                  </TabPanel>
-                  <TabPanel>
-                    <TabGrid filter="Misc" />
-                  </TabPanel>
+                  {TabListData.map((tabData, index) => (
+                    <TabPanel key={index}>
+                      <TabGrid filter={tabData.title} />
+                    </TabPanel>
+                  ))}
                 </TabPanels>
               </Tabs>
             </Flex>
