@@ -83,7 +83,6 @@ export default function PostPage(props: {
                   <Avatar
                     name="Abhishek Jha"
                     size="xs"
-                    alt="author"
                     src="/images/abhishek.jpg"
                     border="1px solid #D1D5DB"
                   />
