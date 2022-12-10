@@ -1,19 +1,14 @@
 import {
-  Container,
-  Icon,
-  Stack,
   Flex,
   Heading,
   Text,
-  Button,
   Box,
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
-import NextLink from "next/link";
-import { IoRocket } from "react-icons/io5";
 import { Layout } from "../components";
 import { ExperienceCard } from "../components/ExperienceCard";
+import { TypingAnimation } from "../components/Animations";
 import { ExperienceData } from "../data/Experience";
 
 const Experience = () => {
@@ -50,7 +45,7 @@ const Experience = () => {
                 fontSize={{ base: "3xl", sm: "4xl", md: "5xl", lg: "6xl" }}
                 textAlign="center"
               >
-                Work Experience
+                <TypingAnimation text=" Work Experience" />
               </Heading>
               <Text color={useColorModeValue("gray.700", "gray.300")} mt={3}>
                 A summary of my work experiences 🚀

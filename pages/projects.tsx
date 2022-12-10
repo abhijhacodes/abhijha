@@ -13,6 +13,7 @@ import {
 import { Layout, TabGrid } from "../components";
 import { TabListData } from "../data/Projects";
 import { TabItem } from "../components/TabItem";
+import { TypingAnimation } from "../components/Animations";
 
 const Projects: NextPage = () => {
   return (
@@ -48,7 +49,7 @@ const Projects: NextPage = () => {
                 fontSize={{ base: "3xl", sm: "4xl", md: "5xl", lg: "6xl" }}
                 textAlign="center"
               >
-                My Projects
+                <TypingAnimation text="My Projects" />
               </Heading>
               <Text color={useColorModeValue("gray.700", "gray.300")} mt={3}>
                 Here are some of the projects I have built :)

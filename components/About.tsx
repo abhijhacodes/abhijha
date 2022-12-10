@@ -4,7 +4,6 @@ import {
   Center,
   Container,
   Heading,
-  VStack,
   Accordion,
   AccordionItem,
   AccordionButton,
@@ -17,24 +16,13 @@ import {
   ListIcon,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { ReactNode } from "react";
-import {
-  MdCheckCircle,
-  MdLeaderboard,
-  MdLanguage,
-  MdSchool,
-  MdHome,
-  MdPerson,
-  MdMic,
-} from "react-icons/md";
-import { ImHeart } from "react-icons/im";
-interface AcordItemProps {
-  question: string;
-  answer: ReactNode;
-}
+import { ScaleOnHover } from "./Animations";
+import { AboutDataProps, AboutMeData } from "../data/About";
+import { useState } from "react";
 
-const AcordItem = (props: AcordItemProps) => {
-  const { question, answer } = props;
+const AcordItem = (props: AboutDataProps) => {
+  const { question, answers } = props;
+
   return (
     <AccordionItem>
       <h2>
@@ -51,12 +39,23 @@ const AcordItem = (props: AcordItemProps) => {
           <AccordionIcon />
         </AccordionButton>
       </h2>
-      <AccordionPanel pb={4}>{answer}</AccordionPanel>
+      <AccordionPanel pb={4}>
+        <List>
+          {answers.map((answer, index) => (
+            <ListItem key={index}>
+              <ListIcon as={answer.icon} color={`${answer.color}.500`} />
+              {answer.text}
+            </ListItem>
+          ))}
+        </List>
+      </AccordionPanel>
     </AccordionItem>
   );
 };
 
 export const About = () => {
+  const [currentImage, setCurrentImage] = useState(1);
+
   return (
     <Container maxW={"7xl"} alignItems="center" justifyContent="center">
       <Stack
@@ -87,14 +86,20 @@ export const About = () => {
             maxW={{ base: "220px", md: "280px", lg: "350px" }}
             maxH={{ base: "220px", md: "280px", lg: "350px" }}
           >
-            <Image
-              src="/images/posterphoto.png"
-              borderRadius="full"
-              w={{ base: "220px", md: "280px", lg: "350px" }}
-              h={{ base: "220px", md: "280px", lg: "350px" }}
-              alt="Abhishek Jha"
-              cursor="pointer"
-            />
+            <ScaleOnHover>
+              <Image
+                src={`/images/${
+                  currentImage === 1 ? "posterphoto.png" : "abhi.jpeg"
+                }`}
+                borderRadius="full"
+                w={{ base: "220px", md: "280px", lg: "350px" }}
+                h={{ base: "220px", md: "280px", lg: "350px" }}
+                alt="Abhishek Jha"
+                cursor="pointer"
+                onMouseOver={() => setCurrentImage(2)}
+                onMouseOut={() => setCurrentImage(1)}
+              />
+            </ScaleOnHover>
           </Box>
         </Stack>
         <Flex
@@ -112,72 +117,13 @@ export const About = () => {
             overflow={"hidden"}
           >
             <Accordion defaultIndex={[0]} allowToggle>
-              <AcordItem
-                question="Who am I ?"
-                answer={
-                  <List>
-                    <ListItem>
-                      <ListIcon as={MdPerson} color="purple.500" />I am Abhishek
-                      Jha, a final year Computer Engineering undergrad,
-                      <br />
-                      who is passionate about coding and development
-                    </ListItem>
-                  </List>
-                }
-              />
-              <AcordItem
-                question="What I do ?"
-                answer={
-                  <List>
-                    <ListItem>
-                      <ListIcon as={MdLanguage} color="yellow.500" />I am
-                      interested in Web development, Mobile app development,
-                      Machine Learning and Problem solving.
-                    </ListItem>
-                    <ListItem>
-                      <ListIcon as={MdLeaderboard} color="blue.500" />
-                      Most time of my day is spent solving DSA and CP problems
-                      and making some cool stuff with code.
-                    </ListItem>
-                  </List>
-                }
-              />
-              <AcordItem
-                question="What is my educational background ?"
-                answer={
-                  <List>
-                    <ListItem>
-                      <ListIcon as={MdSchool} color="green.500" />
-                      Currently I am pursuing Computer engineering from
-                      Sarvajanik College of Engineering and Technology, Surat.
-                    </ListItem>
-                    <ListItem>
-                      <ListIcon as={MdCheckCircle} color="green.500" />I will
-                      complete my graduation in 2023.
-                    </ListItem>
-                    <ListItem>
-                      <ListIcon as={MdHome} color="green.500" />I have completed
-                      my schooling from St. Xavier High School, Surat.
-                    </ListItem>
-                  </List>
-                }
-              />
-              <AcordItem
-                question="What I do apart from coding ?"
-                answer={
-                  <List>
-                    <ListItem>
-                      <ListIcon as={MdMic} color="blue.500" />
-                      You can ping me for any discussion about Hip-Hop & Cricket
-                      :)
-                    </ListItem>
-                    <ListItem>
-                      <ListIcon as={ImHeart} color="red.500" />I am also a huge
-                      fan of Maths, Poem, Literature and Sports
-                    </ListItem>
-                  </List>
-                }
-              />
+              {AboutMeData.map((aboutMe, index) => (
+                <AcordItem
+                  question={aboutMe.question}
+                  answers={aboutMe.answers}
+                  key={index}
+                />
+              ))}
             </Accordion>
           </Center>
         </Flex>

@@ -16,6 +16,7 @@ import { SearchIcon } from "@chakra-ui/icons";
 import { searchInFrontMatter, sortByPublishedAt } from "../../utils/postUtils";
 import { getNotesMetadata } from "../../utils/mdxUtils";
 import { BlogFrontMatter } from "../../types";
+import { TypingAnimation } from "../../components/Animations";
 
 export function getStaticProps() {
   return { props: { notes: getNotesMetadata() } };
@@ -24,6 +25,19 @@ export function getStaticProps() {
 const Blog = ({ notes }: { notes: BlogFrontMatter[] }) => {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const sortedPosts = notes.sort(sortByPublishedAt);
+  const [posts, setPosts] = useState(sortedPosts);
+
+  const filterPostsOnSearch = (newSearchQuery: string) => {
+    setSearchQuery(newSearchQuery);
+
+    const filteredPosts = sortedPosts
+      .filter((f: BlogFrontMatter) => !f.draft)
+      .filter((f: BlogFrontMatter) => searchInFrontMatter(f, newSearchQuery))
+      .filter((f: BlogFrontMatter) => f.isBlogPost === true);
+
+    setPosts(filteredPosts);
+  };
+
   return (
     <>
       <Layout
@@ -57,7 +71,7 @@ const Blog = ({ notes }: { notes: BlogFrontMatter[] }) => {
                 mt="24"
                 fontSize={{ base: "3xl", sm: "4xl", md: "5xl", lg: "6xl" }}
               >
-                My Blogs
+                <TypingAnimation text="My Blogs" />
               </Heading>
               <Text color={useColorModeValue("gray.700", "gray.300")}>
                 This is my piece of the internet where I write some stuff.
@@ -78,22 +92,23 @@ const Blog = ({ notes }: { notes: BlogFrontMatter[] }) => {
                   borderWidth="0.5px"
                   borderColor={useColorModeValue("teal.300", "teal.800")}
                   placeholder="Search blogs by title, tag or description"
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => filterPostsOnSearch(e.target.value)}
+                  value={searchQuery}
                 />
               </InputGroup>
-              {sortedPosts
-                .filter((f: BlogFrontMatter) => !f.draft)
-                .filter((f: BlogFrontMatter) =>
-                  searchInFrontMatter(f, searchQuery)
-                )
-                .filter((f: BlogFrontMatter) => f.isBlogPost === true)
-                .map((frontMatter: BlogFrontMatter) => (
+              {posts.length > 0 ? (
+                posts.map((frontMatter: BlogFrontMatter) => (
                   <PostCard
                     key={frontMatter.title}
                     frontMatter={frontMatter}
                     folderPrefix="blogs/"
                   />
-                ))}
+                ))
+              ) : (
+                <Heading as="h2" color="red.400">
+                  No Posts Found {searchQuery.length > 0 && "for your search"}
+                </Heading>
+              )}
             </Stack>
           </Flex>
         </Box>

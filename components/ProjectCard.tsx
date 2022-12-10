@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { ProjectProps } from "../data/Projects";
+import { ScaleOnHover } from "./Animations";
 import { Tags } from "./Tags";
 
 export const ProjectCard = (props: ProjectProps) => {
@@ -22,15 +23,18 @@ export const ProjectCard = (props: ProjectProps) => {
       minH="320px"
       maxH="500px"
     >
-      <Image
-        width={1250}
-        height={600}
-        w="auto"
-        h="auto"
-        src={imageURL}
-        transition="0.3s"
-        alt={title}
-      />
+      <ScaleOnHover>
+        <Image
+          width={1250}
+          height={600}
+          w="auto"
+          h="auto"
+          src={imageURL}
+          transition="0.3s"
+          alt={title}
+          cursor="pointer"
+        />
+      </ScaleOnHover>
       <Stack px={4} py={4}>
         <Stack isInline justifyContent="space-between" alignItems="center">
           <Text

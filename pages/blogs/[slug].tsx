@@ -22,6 +22,7 @@ import {
 import dayjs from "dayjs";
 import remarkCodeTitles from "remark-code-titles";
 import remarkSlug from "remark-slug";
+import { TypingAnimation } from "../../components/Animations";
 
 export default function PostPage(props: {
   source: any;
@@ -70,7 +71,7 @@ export default function PostPage(props: {
                 fontWeight="bold"
                 fontSize={{ base: "3xl", sm: "4xl", md: "5xl", lg: "6xl" }}
               >
-                {postTitle}
+                <TypingAnimation text={postTitle} />
               </Heading>
 
               <Stack
@@ -83,7 +84,7 @@ export default function PostPage(props: {
                   <Avatar
                     name="Abhishek Jha"
                     size="xs"
-                    src="/images/abhishek.jpg"
+                    src="/images/posterphoto.png"
                     border="1px solid #D1D5DB"
                   />
                   <Text
@@ -110,6 +111,12 @@ export default function PostPage(props: {
                   size="sm"
                   variant="outline"
                   onClick={onCopy}
+                  boxShadow={
+                    "0px 1px 25px -5px rgb(144 214 64 / 56%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
+                  }
+                  _hover={{
+                    transform: "translate(2px, 6px)",
+                  }}
                 >
                   {hasCopied ? "Copied 👌 " : "Copy Link "}
                 </Button>

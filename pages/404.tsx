@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { Layout } from "../components";
+import { TypingAnimation } from "../components/Animations";
 
 const NotFound = () => {
   return (
@@ -30,7 +31,9 @@ const NotFound = () => {
             textAlign={"center"}
           >
             <Stack spacing={2}>
-              <Heading>Page not found</Heading>
+              <Heading>
+                <TypingAnimation text="Page not found" />
+              </Heading>
               <Text>
                 This page was not found. You may have mistyped the address or
                 the page may have moved.

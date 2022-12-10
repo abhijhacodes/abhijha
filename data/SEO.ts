@@ -13,7 +13,7 @@ export const DEFAULT_SEO_CONFIG: DefaultSeoProps = {
     title: DEFAULT_TITLE,
     images: [
       {
-        url: `${BASE_URL}/public/images/abhishek.jpg`,
+        url: `${BASE_URL}/public/images/posterphoto.png`,
         alt: DEFAULT_TITLE,
         width: 1280,
         height: 720,

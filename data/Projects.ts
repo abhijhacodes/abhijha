@@ -50,7 +50,7 @@ export const TabListData: Array<TabListProps> = [
 
 export const ProjectsData: Array<ProjectProps> = [
   {
-    imageURL: "/images/project/sellpro.jpg",
+    imageURL: "/images/projects/sellpro.jpg",
     category: ["All", "Web"],
     title: "SellPro",
     description:
@@ -60,7 +60,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["Next", "Express", "MongoDB"],
   },
   {
-    imageURL: "/images/project/colconnect.png",
+    imageURL: "/images/projects/colconnect.png",
     category: ["All", "Web"],
     title: "Colconnect",
     description:
@@ -69,16 +69,35 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["Next", "Firebase", "Tailwind"],
   },
   {
-    imageURL: "/images/project/portfolio.png",
+    imageURL: "/images/projects/portfolio.png",
     category: ["All", "Web"],
     title: "Personal Portfolio",
     description:
-      "The site that you are currently on. SEO optimised, fully responsive portfolio website with dark and light theme. With markdown featured blog section.",
+      "The site that you are currently on. SEO optimised, fully responsive portfolio website with dark and light theme. With markdown featured blogs.",
     deployLink: "https://abhijha.in/",
     tags: ["Next", "ChakraUI", "MDX"],
   },
   {
-    imageURL: "/images/project/ide.png",
+    imageURL: "/images/projects/splitwise.png",
+    category: ["All", "Web"],
+    title: "Splitwise Clone",
+    description:
+      "Fully featured frontend clone of Splitwise. Keep track of all your expenses, pay and split by individual or multiple people. And see history of your splits.",
+    deployLink: "https://splitwisest.vercel.app/",
+    tags: ["Next", "JS", "CSS"],
+  },
+  {
+    imageURL: "/images/projects/ringover.png",
+    category: ["All", "Web"],
+    title: "Customizable Shoe Store",
+    description:
+      "Multi page responsive website for a shoe store. You can select different variations of any shoe, add to cart, filter shoes by various parameters, etc.",
+    githubLink: "https://github.com/abhijhacodes/ringover",
+    deployLink: "https://ringover-abhi.vercel.app/store",
+    tags: ["Next", "JS", "CSS"],
+  },
+  {
+    imageURL: "/images/projects/ide.png",
     category: ["All", "Web"],
     title: "Online IDE",
     description:
@@ -88,7 +107,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["Web", "React", "CSS"],
   },
   {
-    imageURL: "/images/project/ipldashboard.png",
+    imageURL: "/images/projects/ipldashboard.png",
     category: ["All", "Web"],
     title: "IPL Dashboard",
     description:
@@ -98,7 +117,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["Next", "ChakraUI", "Chart.js"],
   },
   {
-    imageURL: "/images/project/coolchat.png",
+    imageURL: "/images/projects/coolchat.png",
     category: ["All", "Web"],
     title: "CoolChat",
     description:
@@ -108,7 +127,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["React", "Firebase", "CSS"],
   },
   {
-    imageURL: "/images/project/theme.png",
+    imageURL: "/images/projects/theme.png",
     category: ["All", "Misc"],
     title: "Cool dark theme",
     description:
@@ -119,7 +138,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["JSON", "VsCode"],
   },
   {
-    imageURL: "/images/project/shoppingcart.png",
+    imageURL: "/images/projects/shoppingcart.png",
     category: ["All", "Web"],
     title: "Shopping Cart with Redux",
     description:
@@ -129,7 +148,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["Redux", "Redux Toolkit", "Next.js"],
   },
   {
-    imageURL: "/images/project/harbour.png",
+    imageURL: "/images/projects/harbour.png",
     category: ["All", "Mobile"],
     title: "Harbour Management App",
     description:
@@ -158,7 +177,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["HTML", "CSS", "JS"],
   },
   {
-    imageURL: "/images/project/tictactoe.png",
+    imageURL: "/images/projects/tictactoe.png",
     category: ["All", "Mobile"],
     title: "Tic Tac Toe",
     description: "Tic Tac Toe game android app built with Kotlin",
@@ -166,7 +185,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["Mobile", "Kotlin"],
   },
   {
-    imageURL: "/images/project/mememania.png",
+    imageURL: "/images/projects/mememania.png",
     category: ["All", "Mobile"],
     title: "MemeMania",
     description:
@@ -175,7 +194,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["Mobile", "Kotlin", "API"],
   },
   {
-    imageURL: "/images/project/superheroes.png",
+    imageURL: "/images/projects/superheroes.png",
     category: ["All", "Web"],
     title: "SuperHeroes",
     description:
@@ -184,7 +203,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["Web", "Next", "MongoDB"],
   },
   {
-    imageURL: "/images/project/techfreaks.png",
+    imageURL: "/images/projects/techfreaks.png",
     category: ["All", "Web"],
     title: "TechFreaks website",
     description:
@@ -194,7 +213,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["Web", "HTML", "Bootstrap"],
   },
   {
-    imageURL: "/images/project/virtual.jpg",
+    imageURL: "/images/projects/virtual.jpg",
     category: ["All", "Python"],
     title: "Virtual Assistant",
     description:
@@ -203,7 +222,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["ML", "Python", "Automation"],
   },
   {
-    imageURL: "/images/project/game.jpg",
+    imageURL: "/images/projects/game.jpg",
     category: ["All", "Python"],
     title: "Space Invaders",
     description:
@@ -212,7 +231,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["Python", "Game", "Pygame"],
   },
   {
-    imageURL: "/images/project/p2a.jpg",
+    imageURL: "/images/projects/p2a.jpg",
     category: ["All", "Python"],
     title: "PDF to AudioBook converter",
     description:
@@ -221,7 +240,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["ML", "Python", "PDFtoAudio"],
   },
   {
-    imageURL: "/images/project/datascience.jpg",
+    imageURL: "/images/projects/datascience.jpg",
     category: ["All", "Python"],
     title: "Data Science Learning Resources",
     description:
@@ -230,7 +249,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["ML", "Python", "DataScience"],
   },
   {
-    imageURL: "/images/project/hof.png",
+    imageURL: "/images/projects/hof.png",
     category: ["All", "Misc", "Python"],
     title: "Higher Order Functions",
     description:
@@ -239,7 +258,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["ML", "CPP", "Python"],
   },
   {
-    imageURL: "/images/project/cses.png",
+    imageURL: "/images/projects/cses.png",
     category: ["All", "Misc"],
     title: "CSES Solutions",
     description:

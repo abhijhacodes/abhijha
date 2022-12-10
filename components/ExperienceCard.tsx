@@ -9,13 +9,12 @@ import {
   ListItem,
   Tag,
   Text,
-  UnorderedList,
   useColorModeValue,
   VStack,
   Wrap,
   WrapItem,
 } from "@chakra-ui/react";
-import { IoRocket, IoRocketOutline } from "react-icons/io5";
+import { IoRocketOutline } from "react-icons/io5";
 import { ExperienceProps } from "../data/Experience";
 
 export const ExperienceCard = (props: ExperienceProps) => {

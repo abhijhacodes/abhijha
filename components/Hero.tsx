@@ -8,6 +8,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { CONFETTI_LIGHT, CONFETTI_DARK, Socials } from "./";
+import { ScaleOnHover, ScaleOnLoad, TypingAnimation } from "./Animations";
 
 export const Hero = () => {
   return (
@@ -46,7 +47,7 @@ export const Hero = () => {
             fontSize={{ base: "3xl", sm: "4xl", md: "5xl", lg: "6xl" }}
             maxW={"2xl"}
           >
-            Hi, I&apos;m Abhishek Jha
+            <TypingAnimation text="Hi, I'm Abhishek Jha" />
           </Heading>
           <Stack spacing={2}>
             <Text
@@ -69,12 +70,17 @@ export const Hero = () => {
           <Socials />
         </Stack>
         <Box flex={{ base: "0.2", md: "0.4", lg: "0.4" }}>
-          <Image
-            src="/images/heroImage.svg"
-            height={{ base: "300", md: "400", lg: "500" }}
-            alt="hero image"
-            width={{ base: "300", md: "400", lg: "500" }}
-          />
+          <ScaleOnLoad>
+            <ScaleOnHover>
+              <Image
+                src="/images/heroImage.svg"
+                height={{ base: "300", md: "400", lg: "500" }}
+                alt="hero image"
+                width={{ base: "300", md: "400", lg: "500" }}
+                cursor="pointer"
+              />
+            </ScaleOnHover>
+          </ScaleOnLoad>
         </Box>
       </Stack>
     </Box>

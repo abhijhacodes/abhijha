@@ -205,7 +205,9 @@ export const Contact = () => {
                             variant="solid"
                             bg="#02054B"
                             color="white"
-                            _hover={{ border: "2px solid #1C6FEB" }}
+                            _hover={{
+                              transform: "translate(2px, 6px)",
+                            }}
                             rightIcon={<IoRocketSharp />}
                           >
                             Send Message

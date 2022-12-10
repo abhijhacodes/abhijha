@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { TagColor } from "../../data/Tags";
+import { ScaleOnHover } from "../Animations/ScaleOnHover";
 
 interface LinkCardProps {
   name: string;
@@ -32,6 +33,7 @@ export const LinkCard = ({
   isLoading,
 }: LinkCardProps) => {
   const isLoadingFromProps = isLoading || false;
+
   return (
     <NextLink href={link} passHref>
       <Link
@@ -93,14 +95,16 @@ export const LinkCard = ({
                     </Stack>
                   )}
                 </Container>
-                <Image
-                  display={{ base: "none", lg: "block" }}
-                  align="flex-end"
-                  alt="blog hero image"
-                  src={hero ? hero : "/images/blog/blogging.svg"}
-                  height={120}
-                  width={200}
-                />
+                <ScaleOnHover>
+                  <Image
+                    display={{ base: "none", lg: "block" }}
+                    align="flex-end"
+                    alt="blog hero image"
+                    src={hero ? hero : "/images/blog/blogging.svg"}
+                    height={120}
+                    width={200}
+                  />
+                </ScaleOnHover>
               </Stack>
             </Flex>
           </Box>
