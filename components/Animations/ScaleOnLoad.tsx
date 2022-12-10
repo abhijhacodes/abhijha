@@ -10,7 +10,7 @@ export const ScaleOnLoad = ({ children }: ScaleOnLoadProps) => {
     <motion.div
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
-      transition={{ duration: 1, ease: "easeInOut" }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
     >
       {children}
     </motion.div>
