@@ -157,7 +157,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["Flutter", "Firebase"],
   },
   {
-    imageURL: "/images/project/rickmorty.png",
+    imageURL: "/images/projects/rickmorty.png",
     category: ["All", "Web"],
     title: "Rick and Morty",
     description:
@@ -167,7 +167,7 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["Next", "GraphQL", "ChakraUI"],
   },
   {
-    imageURL: "/images/project/terminal.png",
+    imageURL: "/images/projects/terminal.png",
     category: ["All", "Web"],
     title: "Terminal style portfolio",
     description:
