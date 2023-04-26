@@ -18,7 +18,6 @@ import {
 } from "@chakra-ui/react";
 import { ScaleOnHover } from "./Animations";
 import { AboutDataProps, AboutMeData } from "../data/About";
-import { useState } from "react";
 
 const AcordItem = (props: AboutDataProps) => {
   const { question, answers } = props;
@@ -54,8 +53,6 @@ const AcordItem = (props: AboutDataProps) => {
 };
 
 export const About = () => {
-  const [currentImage, setCurrentImage] = useState(1);
-
   return (
     <Container maxW={"7xl"} alignItems="center" justifyContent="center">
       <Stack
@@ -88,16 +85,12 @@ export const About = () => {
           >
             <ScaleOnHover>
               <Image
-                src={`/images/${
-                  currentImage === 1 ? "posterphoto.png" : "abhi.jpeg"
-                }`}
+                src="images/posterphoto.png"
                 borderRadius="full"
                 w={{ base: "220px", md: "280px", lg: "350px" }}
                 h={{ base: "220px", md: "280px", lg: "350px" }}
                 alt="Abhishek Jha"
                 cursor="pointer"
-                onMouseOver={() => setCurrentImage(2)}
-                onMouseOut={() => setCurrentImage(1)}
               />
             </ScaleOnHover>
           </Box>
