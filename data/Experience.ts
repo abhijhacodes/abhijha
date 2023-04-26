@@ -21,7 +21,7 @@ export const ExperienceData: Array<ExperienceProps> = [
     points: [
       "Working on Flutter, Dart, GraphQL and Javscript in production",
       "Building an internal app for Microsoft Teams for Microsoft India employees’ mental wellbeing using Flutter web and Javascript",
-      "Having the complete ownership for this app, also managed Unit testing and CI/CD pipelines",
+      "Having the complete ownership for this app including development, unit testing and CI/CD pipelines",
       "This Teams app has state management, Microsoft SOS, encrypted data storage, etc.",
     ],
     skills: ["Flutter", "Dart", "Javascript", "GraphQL"],
@@ -38,7 +38,7 @@ export const ExperienceData: Array<ExperienceProps> = [
       "Worked on Next JS, Typescript, CSS, REST APIs and Zustand in production",
       "Built frontend of Account Aggregator B2B product (newer version) which is used by thousands of users daily",
       "Worked on Typescript based SDK (internal tool) for multi AA support",
-      "Wrote custom hooks for better consumption of APIs on client side and improved UXs",
+      "Wrote custom hooks for better consumption of APIs on client side and improved UX",
       "Built completely themeable UI system, and wrote a lot of CSS and react-spring animations",
       "Improved loading time of existing AA product by 40% and reduced first load JS by 70%",
     ],
