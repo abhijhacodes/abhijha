@@ -51,7 +51,7 @@ export const Socials = () => {
             See my work
           </Button>
         </NextLink>
-        <NextLink href="/blog" passHref>
+        <NextLink href="/blogs" passHref>
           <Button
             as={"a"}
             colorScheme="teal"
