@@ -69,6 +69,16 @@ export const ProjectsData: Array<ProjectProps> = [
     tags: ["Next", "Firebase", "Tailwind"],
   },
   {
+    imageURL: "/images/projects/newsletter.png",
+    category: ["All", "Web", "Python"],
+    title: "Newsletter",
+    description:
+      "Full stack newsletter project where other users can subscribe and I can publish newsletter and send it as email to all users using my admin panel.",
+    deployLink: "https://abhijha-newsletter.netlify.app/",
+    githubLink: "https://github.com/abhijhacodes/newsletter",
+    tags: ["FastAPI", "React", "PostgreSQL"],
+  },
+  {
     imageURL: "/images/projects/portfolio.png",
     category: ["All", "Web"],
     title: "Personal Portfolio",
