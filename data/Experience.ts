@@ -11,17 +11,34 @@ export interface ExperienceProps {
 
 export const ExperienceData: Array<ExperienceProps> = [
   {
+    jobTitle: "SDE - 1 (Full Stack)",
+    companyName: "Setu",
+    companyWebsite: "https://setu.co",
+    companyLogoUrl:
+      "https://pbs.twimg.com/profile_images/1410497916343492610/CheIyEzB_400x400.jpg",
+    companyLocation: "Remote - Bengaluru, India",
+    timeline: "June 2023 - Current",
+    points: [
+      "Working on Next JS, Fast API and AWS in production",
+      "Working on adding new features, maintaining and improving the Account Aggregator frontend",
+      "Working across multiple backend projects in Python for adding new features",
+      "Using and integrating external tools like Posthog, Clickhouse, etc.",
+      "Fixing bugs of Account Aggregator product on staging, QA and production environments",
+    ],
+    skills: ["Typescript", "Next JS", "Python", "Fast API", "AWS"],
+  },
+  {
     jobTitle: "Research Intern",
     companyName: "Microsoft",
     companyWebsite: "https://microsoft.com",
     companyLogoUrl:
       "https://www.freepnglogos.com/uploads/microsoft-window-logo-emblem-0.png",
     companyLocation: "Bengaluru, India",
-    timeline: "April 2023 - Current",
+    timeline: "April 2023 - June 2023",
     points: [
-      "Working on Flutter, Dart, GraphQL and Javscript in production",
-      "Building an internal app for Microsoft Teams for Microsoft India employees’ mental wellbeing using Flutter web and Javascript",
-      "Having the complete ownership for this app including development, unit testing and CI/CD pipelines",
+      "Worked on Flutter, Dart, GraphQL and Javscript in production",
+      "Built an internal app for Microsoft Teams for Microsoft India employees’ mental wellbeing using Flutter web and Javascript",
+      "Had the complete ownership for this app including development, unit testing and CI/CD pipelines",
       "This Teams app has state management, Microsoft SOS, encrypted data storage, etc.",
     ],
     skills: ["Flutter", "Dart", "Javascript", "GraphQL"],
