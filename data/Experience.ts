@@ -44,7 +44,7 @@ export const ExperienceData: Array<ExperienceProps> = [
     skills: ["Flutter", "Dart", "Javascript", "GraphQL"],
   },
   {
-    jobTitle: "Software Engineer Intern",
+    jobTitle: "SDE Intern (Frontend)",
     companyName: "Setu",
     companyWebsite: "https://setu.co/",
     companyLogoUrl:
@@ -68,7 +68,7 @@ export const ExperienceData: Array<ExperienceProps> = [
     ],
   },
   {
-    jobTitle: "Problem Setter",
+    jobTitle: "Problem Setter (DSA & CP)",
     companyName: "Codechef SCET Chapter",
     companyWebsite:
       "https://www.codechef.com/campus_chapter/CodeChef_SCET_Chapter",
