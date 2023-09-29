@@ -25,7 +25,7 @@ export const AboutMeData: Array<AboutDataProps> = [
     question: "Who am I ?",
     answers: [
       {
-        text: "I am Abhishek Jha, a final year Computer Engineering undergrad, who is passionate about coding and development",
+        text: "I am Abhishek Jha, a Full stack Software Engineer and Computer nerd who is passionate about coding and development.",
         color: "purple",
         icon: MdPerson,
       },
@@ -35,12 +35,12 @@ export const AboutMeData: Array<AboutDataProps> = [
     question: "What I do ?",
     answers: [
       {
-        text: "I am interested in Web development, Mobile app development, Machine Learning and Problem solving.",
+        text: "I currently work as a Full time Software Engineer at Setu, a fintech startup in India.",
         color: "yellow",
         icon: MdLanguage,
       },
       {
-        text: "Most time of my day is spent solving DSA and CP problems and making some cool stuff with code.",
+        text: "I spend my time building cool and innovative stuffs at my job, and learn more and more about Coding and Computers in my free time.",
         color: "blue",
         icon: MdLeaderboard,
       },
@@ -50,12 +50,12 @@ export const AboutMeData: Array<AboutDataProps> = [
     question: "What is my educational background ?",
     answers: [
       {
-        text: "Currently I am pursuing Computer engineering from Sarvajanik College of Engineering and Technology, Surat.",
+        text: "I have done Computer Engineering from Gujarat Technological University, Ahmedabad.",
         color: "green",
         icon: MdSchool,
       },
       {
-        text: "I will complete my graduation in 2023.",
+        text: "I have completed my graduation in 2023.",
         color: "green",
         icon: MdCheckCircle,
       },
@@ -70,12 +70,12 @@ export const AboutMeData: Array<AboutDataProps> = [
     question: "What I do apart from coding ?",
     answers: [
       {
-        text: "You can ping me for any discussion about Hip-Hop & Cricket:)",
+        text: "You can ping me for any discussion about Music, Sports and Technology.",
         color: "blue",
         icon: MdMic,
       },
       {
-        text: "I am also a huge fan of Maths, Poem, Literature and Sports.",
+        text: "I am also a huge fan of Maths, Poem and Literature.",
         color: "red",
         icon: ImHeart,
       },
