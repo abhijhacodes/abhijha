@@ -6,6 +6,12 @@ class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
+					<script
+						src={process.env.NEXT_PUBLIC_SANKHYA_SDK_URL}
+						type="text/javascript"
+						defer
+					></script>
+
 					<link
 						rel="preconnect"
 						href="https://fonts.gstatic.com"
@@ -13,9 +19,6 @@ class MyDocument extends Document {
 					<link
 						href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&family=Inter:wght@400;500;600;700&display=swap"
 						rel="stylesheet"
-					/>
-					<script
-						src={`${process.env.NEXT_PUBLIC_SANKHYA_SDK_URL}`}
 					/>
 				</Head>
 				<body>

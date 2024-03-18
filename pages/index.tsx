@@ -7,9 +7,11 @@ const Home: NextPage = () => {
 	useEffect(() => {
 		(async () => {
 			try {
-				await (window as any).sankhyaSDKv1.captureUserEvent(
-					process.env.NEXT_PUBLIC_SANKHYA_API_KEY
-				);
+				if (typeof window !== "undefined") {
+					await (window as any).sankhyaSDKv1.captureUserEvent(
+						process.env.NEXT_PUBLIC_SANKHYA_API_KEY
+					);
+				}
 			} catch (error) {}
 		})();
 	}, []);
