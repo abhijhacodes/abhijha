@@ -278,13 +278,4 @@ export const ProjectsData: Array<ProjectProps> = [
 		githubLink: "https://github.com/abhijhacodes/higher-order-functions",
 		tags: ["ML", "CPP", "Python"],
 	},
-	{
-		imageURL: "/images/projects/cses.png",
-		category: ["All", "Misc"],
-		title: "CSES Solutions",
-		description:
-			"C++ solutions to various problems from the popular CSES problem set.",
-		githubLink: "https://github.com/abhijhacodes/cses-solutions",
-		tags: ["CPP", "CP"],
-	},
 ];
